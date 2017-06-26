@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Atraccion</title>
+	<link rel="stylesheet" href="../css/prin.css">
+    <link rel="stylesheet" href="../css/Estilos_Inicio.css">
+    
+    <STYLE> 
+      BODY { background: url(../Imagenes/Fondo.jpg) center fixed no-repeat} 
+    </STYLE> 
+    
+    
+</head>
+<body>
+	<header>
+	  <section class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="Menu.html">Inicio</a></li>
+					<li><a href="#">Operario Atraccion</a></li>
+					<li><a href="mantenimiento.html">Operario Mantenimiento</a></li>
+					<li><a href="central.html">Central Receptora De Averias</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+		    </nav>
+	    </section>
+	</header>
+
+<section class="contenido wrapper">
+
+    <body>
+    
+    <div class="group">
+        
+        <form action="../php/Atraccion_Operario.php" method="POST">
+        <h2><em>Operario De Atraccion</em></h2>
+
+        <center> <label for="entrada"> Cantidad Entrada <span><em>(requerido)</em></span></label> </center>
+        <center> <input type="text" name="entrada_usuario" class="form-input" required/> </center>
+
+        <center> <label for="salida"> Cantidad De Salida <span><em>(requerido)</em></span></label> </center>
+        <center> <input type="text" name="salida_usuario" class="form-input" required/> </center>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+        <BR>
+            
+        <input class="form-btn" name="submit" style="Position:fixed; left:40%; top:45%" type="button" value="Arrancar" />
+        <input class="form-btn" name="submit" style="Position:fixed; left:55%; top:45%" type="submit" value="Detener" />
+        <input class="form-btn" name="submit" onClick="location.href = '../php/Tb.php' " style="Position:fixed; left:47%; top:50%" type="button" value="Estadisticas" />
+            
+            
+            
+
+            
+        </p>
+        </form>
+    </div>
+</body>
+            
+            
+    
+</section>
+</body>
+</html>

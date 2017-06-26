@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+   
+   <STYLE> 
+      BODY { background: url(Imagenes/Sesion.jpg) center fixed no-repeat} 
+   </STYLE> 
+   
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <link href="css/Estilos_Inicio.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="group">
+        <form action="php/registro.php" method="POST">
+            <h2><em>Inicio De Sesion</em></h2>
+
+           <center> <label for="usuario">Usuario <span><em>(requerido)</em></span></label></center>
+           <center> <input type="text" name="usuario" class="form-input" required/></center>
+
+           <center> <label for="contraseña">Contraseña <span><em>(requerido)</em></span></label></center>
+            <center><input type="password" name="contra" class="form-input" required/></center>
+
+            <center> <input class="form-btn" name="submit" type="submit" value="Entrar"/></center>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

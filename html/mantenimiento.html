@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Mantenimiento</title>
+	<link rel="stylesheet" href="../css/prin.css">
+    <link href="../css/Estilos_Inicio.css" rel="stylesheet" type="text/css">
+    
+    <STYLE> 
+      BODY { background: url(../Imagenes/Fondo.jpg) center fixed no-repeat} 
+    </STYLE> 
+    
+</head>
+<body>
+	<header>
+	  <section class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="Menu.html">Inicio</a></li>
+					<li><a href="atraccion.html">Operario Atraccion</a></li>
+					<li><a href="mantenimiento.html">Operario Mantenimiento</a></li>
+					<li><a href="central.html">Central Receptora De Averias</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+		    </nav>
+	    </section>
+	</header>
+
+<section class="contenido wrapper">
+ 
+    
+    <body>
+    <div class="group">
+       
+        <form action="../php/Mantenimiento.php" method="POST">
+        <h2><em>Operario De Mantenimiento</em></h2>
+            
+             
+
+        <center> <label for="entrada"> Estado Del Operario <span><em></em></span></label> </center>
+            
+          <center>  <select  name="EO"> </center>
+              <option value="Libre">Libre</option>
+              <option value="Ocupado">Ocupado</option>
+             </select> 
+            
+             <BR>
+             <BR>
+            
+
+        <center> <label for="salida"> Estado De La Atraccion <span><em></em></span></label> </center>
+                <center>  <select  name="EA"> </center>
+               <option value="Ninguna"> Ninguna </option>
+              <option value="Reparacion"> Listo </option>
+              <option value="Listo"> En Curso </option>
+             </select> 
+  
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+                 
+        <input class="form-btn" name="submit" style="Position:Absolute; left:40%; top:45%" type="submit" value="Reportar" />
+        <input class="form-btn" name="submit" style="Position:Absolute; left:54%; top:45%" type="submit" value="Estado" />
+        
+        <input class="form-btn" name="submit" onClick="location.href = '../php/tb_mant_2.php' " style="Position:Absolute; left:47%; top:50%" type="button" value="Operarios" />
+        
+        </p>
+        </form>
+    </div>
+</body>
+    
+
+  
+</section>
+</body>
+</html>

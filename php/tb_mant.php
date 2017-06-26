@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu de navegacion fijo a pantalla</title>
+	<link rel="stylesheet" href="../css/prin.css">
+    
+    <STYLE> 
+      BODY { background: url(../Imagenes/tabla1.jpg) center fixed no-repeat} 
+    </STYLE> 
+    
+</head>
+<body>
+	<header>
+	  <section class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="../html/menu_helmut.html">Inicio</a></li>
+					<li><a href="../html/mantenimiento_2.html">Operario Mantenimiento</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+		    </nav>
+	    </section>
+	</header>
+
+<section class="contenido wrapper">
+  
+<center> <table border="7" cellspacing=10 cellpadding=5 style="font-size: 11pt"> </center> <tr>
+<td><font face="verdana"><b>Estado Operario</b></font></td>
+<td><font face="verdana"><b>Estado Atraccion</b></font></td>
+<td><font face="verdana"><b>N° Operaciones</b></font></td>
+</tr>
+
+<?php  
+    
+
+    
+  $link = @mysql_connect("localhost", "root","usbw")
+      or die ("Error al conectar a la base de datos.");
+  @mysql_select_db("Divertimento", $link)
+      or die ("Error al conectar a la base de datos.");
+
+  $query = "Select * From Operario_mantenimiento";
+  $result = mysql_query($query);
+  $numero = 1;
+    
+  while($row = mysql_fetch_array($result))
+  {
+    echo "<tr><td width=\"25%\"><font face=\"verdana\">" . 
+	    $row["estado_op"] . "</font></td>";
+      
+
+      
+    echo "<td width=\"25%\"><font face=\"verdana\">" . 
+	    $row["estado_atra"] . "</font></td>";
+      
+
+      
+    echo "<td width=\"25%\"><font face=\"verdana\">" .  
+    $numero++;
+  }
+  echo "<tr><td colspan=\"20\"><font face=\"verdana\"><b>Total Operaciones: " . ($numero - 1) . 
+      "</b></font></td></tr>";
+
+    
+  mysql_free_result($result);
+  mysql_close($link);
+?>
+</table>
+    
+  
+</section>
+</body>
+</html>

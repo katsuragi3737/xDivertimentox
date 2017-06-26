@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu CRA</title>
+	<link rel="stylesheet" href="../css/prin.css">
+    <link href="../css/Estilos_Inicio.css" rel="stylesheet" type="text/css">
+    
+    <STYLE> 
+      BODY { background: url(../Imagenes/Fondo.jpg) center fixed no-repeat} 
+    </STYLE> 
+    
+</head>
+<body>
+	<header>
+	  <section class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="Menu.html">Inicio</a></li>
+					<li><a href="atraccion.html">Operario Atraccion</a></li>
+					<li><a href="mantenimiento.html">Operario Mantenimiento</a></li>
+					<li><a href="central.html">Central Receptora De Averias</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+		    </nav>
+	    </section>
+	</header>
+
+<section class="contenido wrapper">
+  
+  
+    <body>
+    <div class="group">
+       
+        <form action="../php/CRA.php" method="POST">
+        <h2><em>Central Receptora De Averias</em></h2>
+            
+             <BR>
+             <BR> 
+
+        <center> <label for="entrada"> Reportar Estado <span><em></em></span></label> </center>
+            
+          <center>  <select  name="reportar"> </center>
+              <option value="Mantenimiento">Mantenimiento</option>
+              <option value="Verificacion">Verificacion</option>
+             </select> 
+            
+             <BR>
+             <BR>
+            
+
+        <center> <label for="salida"> Averia En <span><em></em></span></label> </center>
+                 <center>  <select  name="averia"> </center>
+              <option value="Noria"> Noria </option>
+              <option value="Montaña Rusa"> Montaña Rusa </option>
+             </select> 
+                 
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+             <BR>
+                
+                
+        <input class="form-btn" name="submit" onClick="location.href = '../php/Tb_cra.php' " style="Position:Absolute; left:37%; top:49%" type="button" value="Reporte" />
+                 
+        <input class="form-btn" name="submit" style="Position:Absolute; left:57%; top:49%" type="submit" value="Incidencia" />
+                
+        
+                 
+        </p>
+        </form>
+    </div>
+</body>
+    
+  
+</section>
+</body>
+</html>
